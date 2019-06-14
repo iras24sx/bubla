@@ -11,6 +11,10 @@ Runnig without any parameter it will start with the defaults:
 - max IO 128
 - max VM (mem) 128
 
+Second step of the cycle runs iperf for same time, as was for stress and tries to tranfer something at max spped of 10 Mbit.
+
+This is repeating an infinitum.
+
 Switches:
 ```
 -l X set max time of load/stress to X seconds 
