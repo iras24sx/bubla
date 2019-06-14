@@ -3,13 +3,13 @@ FROM debian:buster-slim
 RUN apt-get update && apt-get install -y stress moreutils iperf
 
 RUN echo '#!/bin/sh\n\
-cpustressmax=3\n\ 
-iostressmax=128\n\ 
-vmstressmax=128\n\ 
-stresstimemax=5\n\ 
-sleeptimemax=1200\n\
-iperfserverhost=speedtest.wtnet.de\n\ 
-iperfserverport=5207\n\ 
+cpustressmax=${BUBLA_MAXCPU:-3}\n\ 
+iostressmax=${BUBLA_MAXIO:-128}\n\ 
+vmstressmax=${BUBLA_MAXMEM:-128}\n\ 
+stresstimemax=${BUBLA_MAXSTRESSTIME:-5}\n\ 
+sleeptimemax=${BUBLA_MAXSLEEPTIME:-1200}\n\
+iperfserverhost=${BUBLA_IPERFSERVERHOST:-speedtest.wtnet.de}\n\ 
+iperfserverport=${BUBLA_IPERFSERVERPORT:-5207}\n\ 
 while getopts 'c:i:h:m:l:p:s:' opt; do\n\
   case "$opt" in\n\
     c)\n\
