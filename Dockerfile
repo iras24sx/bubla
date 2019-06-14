@@ -2,6 +2,7 @@ FROM debian:buster-slim
 
 RUN apt-get update && apt-get install -y stress moreutils iperf
 
+
 RUN echo '#!/bin/sh\n\
 cpustressmax=${BUBLA_MAXCPU:-3}\n\ 
 iostressmax=${BUBLA_MAXIO:-128}\n\ 
