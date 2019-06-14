@@ -12,7 +12,7 @@ Runnig without any parameter it will start with the defaults:
 - max VM (mem) 128
 
 Switches:
-
+```
 -l X set max time of load/stress to X seconds 
 -s X set max time of sleep/no stress to X seconds 
 
@@ -22,5 +22,5 @@ Switches:
 
 -h X set hostname of iperf server to X 
 -p X set port of iperf server to X 
-
+```
 For exact behavior please check the shell script source and mainly documentation of https://people.seas.harvard.edu/~apw/stress/ and https://iperf.fr/.
