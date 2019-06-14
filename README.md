@@ -3,7 +3,7 @@ Randomized stress generator docker image - based on linux stress and iperf.
 
 It buble and randomly generate activity, what can be used for demos or testing. No root account is used for runnig, so it is compatible with the OpenShift.
 
-Runnig without any parameter it will start with the defaults:
+# Runnig without any parameter it will start with the defaults:
 
 - max stress time is 5 seconds
 - max sleeping (no stress) is 1200 seconds
@@ -15,9 +15,9 @@ Second step of the cycle runs iperf for same time, as was for stress and tries t
 
 This is repeating ad infinitum.
 
-Configuration can be done by
+# Configuration can be done by
 
-##Environment variables with self-describing names:
+## Environment variables with self-describing names:
 - BUBLA_MAXCPU 
 - BUBLA_MAXIO
 - BUBLA_MAXMEM
@@ -27,7 +27,7 @@ Configuration can be done by
 - BUBLA_IPERFSERVERPORT
 
 
-##Or commandline switches:
+## Or commandline switches:
 ```
 -l X set max time of load/stress to X seconds 
 -s X set max time of sleep/no stress to X seconds 
