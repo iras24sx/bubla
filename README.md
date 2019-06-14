@@ -13,9 +13,21 @@ Runnig without any parameter it will start with the defaults:
 
 Second step of the cycle runs iperf for same time, as was for stress and tries to tranfer something at max spped of 10 Mbit.
 
-This is repeating an infinitum.
+This is repeating ad infinitum.
 
-Switches:
+Configuration can be done by
+
+##Environment variables with self-describing names:
+- BUBLA_MAXCPU 
+- BUBLA_MAXIO
+- BUBLA_MAXMEM
+- BUBLA_MAXSTRESSTIME
+- BUBLA_MAXSLEEPTIME
+- BUBLA_IPERFSERVERHOST
+- BUBLA_IPERFSERVERPORT
+
+
+##Or commandline switches:
 ```
 -l X set max time of load/stress to X seconds 
 -s X set max time of sleep/no stress to X seconds 
